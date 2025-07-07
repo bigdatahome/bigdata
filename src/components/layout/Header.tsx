@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import React from "react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -22,12 +22,10 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3">
             <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300">
-              <Image
+              <img
                 src="/images/logo_black.png"
                 alt="BIGDATA T.I."
-                width={35}
-                height={35}
-                style={{ aspectRatio: "1/1" }}
+                className="w-9 h-9"
               />
               <span className="text-xl text-gray-900 tracking-tight">
                 <span className="font-bold">빅데이터</span>
@@ -44,11 +42,9 @@ export default function Header() {
           <a href="/consultation" className="relative bg-gray-900 text-white px-3 py-2 rounded-full hover:bg-gray-800 shadow-lg flex items-center justify-between min-w-[170px]">
             <span className="text-base font-medium">&nbsp;&nbsp;무료 기업 상담</span>
             <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center ml-3">
-              <Image
+              <img
                 src="/images/bold_black_arrow.svg"
                 alt="arrow"
-                width={12}
-                height={12}
                 className="w-3 h-3"
               />
             </div>

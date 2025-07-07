@@ -1,6 +1,5 @@
-"use client";
-
-import Image from "next/image";
+'use client';
+import React from 'react';
 import Layout from "@/components/layout/Layout";
 
 export default function ConsultationPage() {
@@ -70,20 +69,17 @@ export default function ConsultationPage() {
         </div>
        
       </section>
-      <Image
+      <img
                     src="/images/logo_black.png"
                     alt="BIGDATA T.I."
-                    width={40}
-                    height={40}
-                    className="mx-auto"
-                    style={{ aspectRatio: "1/1" }}
+                    className="mx-auto w-10 h-10"
                   />
       {/* Solution & Experience Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-              A. 그래서 저희는 '현장 중심 AI 컨설팅'을 제공합니다
+              A. 그래서 저희는 &lsquo;현장 중심 AI 컨설팅&rsquo;을 제공합니다
             </h2>
           </div>
           
@@ -140,13 +136,10 @@ export default function ConsultationPage() {
           </div>
         </div>
       </section>
-      <Image
+      <img
                     src="/images/logo_black.png"
                     alt="BIGDATA T.I."
-                    width={40}
-                    height={40}
-                    className="mx-auto"
-                    style={{ aspectRatio: "1/1" }}
+                    className="mx-auto w-10 h-10"
                   />
       {/* Case Studies Section */}
       <section className="py-20 bg-white">

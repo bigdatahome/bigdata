@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import React from "react";
 
 export default function Footer() {
   return (
@@ -11,13 +11,10 @@ export default function Footer() {
           {/* Company Info Column */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <Image
+              <img
                 src="/images/logo_black.png"
                 alt="BIGDATA T.I."
-                width={36}
-                height={36}
-                className="h-6 w-auto"
-                style={{ aspectRatio: "1/1" }}
+                className="h-9 w-9"
               />
               <span className="text-lg font-bold text-gray-900">빅데이터기술연구원</span>
             </div>
@@ -53,11 +50,9 @@ export default function Footer() {
             <div className="text-gray-600 text-sm space-y-6 text-left">
               <div className="text-left">
                 <div className="flex items-center space-x-2 mb-2 justify-start">
-                  <Image
+                  <img
                     src="/images/korea_gv.png"
                     alt="중소벤처기업부"
-                    width={20}
-                    height={20}
                     className="w-5 h-5"
                   />
                   <span className="text-gray-900 font-medium">중소벤처기업부</span>
@@ -69,11 +64,9 @@ export default function Footer() {
               </div>
               <div className="text-left">
                 <div className="flex items-center space-x-2 mb-2 justify-start">
-                  <Image
+                  <img
                     src="/images/korea_gv.png"
                     alt="고용노동부"
-                    width={20}
-                    height={20}
                     className="w-5 h-5"
                   />
                   <span className="text-gray-900 font-medium">고용노동부</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import React from "react";
 import Layout from "@/components/layout/Layout";
 
 export default function AboutPage() {
@@ -48,12 +48,9 @@ export default function AboutPage() {
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mr-4">
-                  <Image
+                  <img
                     src="/images/korea_gv.png"
                     alt="고용노동부"
-                    width={20}
-                    height={20}
-                    unoptimized={true}
                     className="w-12 h-12"
                   />
                 </div>
@@ -71,12 +68,9 @@ export default function AboutPage() {
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mr-4">
-                  <Image
+                  <img
                     src="/images/korea_gv.png"
                     alt="중소벤처기업부"
-                    width={20}
-                    height={20}
-                    unoptimized={true}
                     className="w-12 h-12"
                   />
                 </div>
@@ -167,12 +161,9 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-200 text-center">
               <div className="flex items-center justify-center mx-auto mb-4">
-                <Image
+                <img
                   src="/images/sslogo2.png"
                   alt="대한민국산업현장교수단"
-                  width={48}
-                  height={48}
-                  unoptimized={true}
                   className="w-12 h-12 object-contain"
                 />
               </div>
@@ -182,12 +173,9 @@ export default function AboutPage() {
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-200 text-center">
               <div className="flex items-center justify-center mx-auto mb-4">
-                <Image
+                <img
                   src="/images/sslogo4.png"
                   alt="한국경영기술지도사회"
-                  width={48}
-                  height={48}
-                  unoptimized={true}
                   className="w-12 h-12 object-contain"
                 />
               </div>
@@ -197,12 +185,9 @@ export default function AboutPage() {
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-200 text-center">
               <div className="flex items-center justify-center mx-auto mb-4">
-                <Image
+                <img
                   src="/images/sslogo1.png"
                   alt="국립대학교 연구실"
-                  width={48}
-                  height={48}
-                  unoptimized={true}
                   className="w-12 h-12 object-contain"
                 />
               </div>
@@ -212,12 +197,9 @@ export default function AboutPage() {
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-200 text-center">
               <div className="flex items-center justify-center mx-auto mb-4">
-                <Image
+                <img
                   src="/images/sslogo3.png"
                   alt="AI 전문 기관"
-                  width={48}
-                  height={48}
-                  unoptimized={true}
                   className="w-12 h-12 object-contain"
                 />
               </div>

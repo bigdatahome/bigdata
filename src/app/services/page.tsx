@@ -1,6 +1,5 @@
-"use client";
-
-import Image from "next/image";
+'use client';
+import React from 'react';
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 
@@ -204,7 +203,7 @@ export default function ServicesPage() {
               기업 실무교육 및 시스템 전환
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              기술 이전이 아닌 '현장 이식' 중심으로<br />
+                              기술 이전이 아닌 &lsquo;현장 이식&rsquo; 중심으로<br />
               실무에 바로 적용 가능한 교육과 컨설팅을 제공합니다
             </p>
           </div>
@@ -255,7 +254,7 @@ export default function ServicesPage() {
               <svg className="w-10 h-10 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-lg font-medium text-gray-700">기술 이전이 아닌 '현장 이식' 중심</span>
+                              <span className="text-lg font-medium text-gray-700">기술 이전이 아닌 &lsquo;현장 이식&rsquo; 중심</span>
             </div>
           </div>
         </div>
