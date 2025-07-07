@@ -147,7 +147,7 @@ export default function Home() {
               </blockquote>
 
               <a 
-                href="/company_overview" 
+                href="/about" 
                 className="inline-flex items-center bg-gray-900 text-white px-5 py-2 rounded-full font-medium hover:bg-gray-800 shadow-lg"
               >
                 회사 소개 전체 보기
