@@ -65,13 +65,40 @@ export default function ContactPage() {
       return;
     }
 
-    // 실제 제출 로직은 여기에 구현
-    // 현재는 시뮬레이션
-    setTimeout(() => {
-      setSubmitMessage("문의가 성공적으로 접수되었습니다. 1일 이내 연락드리겠습니다.");
-      setFormData({ name: "", phone: "", email: "", message: "", captcha: "", privacyAgreed: false });
+    // 실제 API 호출
+    try {
+      const response = await fetch('/api/consultation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitMessage("문의가 성공적으로 접수되었습니다. 1일 이내 연락드리겠습니다.");
+        setFormData({ name: "", phone: "", email: "", message: "", captcha: "", privacyAgreed: false });
+        // CAPTCHA 새로고침
+        setCaptchaQuestion({
+          a: Math.floor(Math.random() * 10) + 1,
+          b: Math.floor(Math.random() * 10) + 1
+        });
+      } else {
+        setSubmitMessage(result.error || "문의 접수 중 오류가 발생했습니다.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage("네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
