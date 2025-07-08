@@ -62,7 +62,7 @@ export default function SolutionsPage() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                GPT-4와 OCR 기반 문항 자동 인식 및 유형 분류 시스템을 설계했습니다.
+              LLM 기반 문항 자동 인식 및 유형 분류 시스템을 설계했습니다.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">GPT-4</span>
@@ -103,12 +103,12 @@ export default function SolutionsPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">내뜰안 프로젝트</h3>
-                  <p className="text-sm text-gray-600">창업경진대회 장려상 수상</p>
+                  <h3 className="text-xl font-bold text-gray-900">스마트팜 AI 교감형 플랫폼</h3>
+                  <p className="text-sm text-gray-600">AI 농업기술경진대회 수상</p>
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                AI 교감형 스마트팜으로 StyleTTS2 기반 감성 응답 음성 캐릭터를 구현했습니다.
+              농업과 치유를 결합한 혁신적인 플랫폼을 구현했습니다.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">StyleTTS2</span>
@@ -126,8 +126,8 @@ export default function SolutionsPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">이음업 플랫폼</h3>
-                  <p className="text-sm text-gray-600">지역 창업경진대회 선정</p>
+                  <h3 className="text-xl font-bold text-gray-900">AI 매칭 플랫폼</h3>
+                  <p className="text-sm text-gray-600">LLM 기반 협업 매칭</p>
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
