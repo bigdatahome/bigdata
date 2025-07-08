@@ -22,7 +22,7 @@ export default function AboutPage() {
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-            "AI는 현장에 닿을 때 진짜 기술이 됩니다"
+            &quot;AI는 현장에 닿을 때 진짜 기술이 됩니다&quot;
           </h2>
           <p className="text-xl md:text-2xl text-gray-200 font-light mb-8 tracking-tight">
             대표 철학에서 출발한 실천 중심 접근법
@@ -35,6 +35,9 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <p className="text-sm text-gray-600 mb-5">
+              A B O U T
+            </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
               빅데이터기술연구원(주)
             </h2>

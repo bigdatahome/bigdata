@@ -4,20 +4,22 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 
+// videoList를 컴포넌트 외부로 이동 (무한 루프 방지)
+const VIDEO_LIST = ["/images/movie4.mp4", "/images/movie3.mp4", "/images/movie2.mp4", "/images/movie1.mp4"];
+
 export default function Home() {
   const [videoSrc, setVideoSrc] = useState<string>("");
   const [currentVideoIndex, setCurrentVideoIndex] = useState<number>(0);
-  const videoList = ["/images/movie4.mp4", "/images/movie3.mp4", "/images/movie2.mp4", "/images/movie1.mp4"];
 
   // 다음 비디오로 전환하는 함수
   const playNextVideo = () => {
-    const nextIndex = (currentVideoIndex + 1) % videoList.length;
+    const nextIndex = (currentVideoIndex + 1) % VIDEO_LIST.length;
     setCurrentVideoIndex(nextIndex);
     
     // 캐시 버스터 추가
     const timestamp = Date.now();
     const random = Math.floor(Math.random() * 10000);
-    const finalVideo = `${videoList[nextIndex]}?v=${timestamp}&r=${random}`;
+    const finalVideo = `${VIDEO_LIST[nextIndex]}?v=${timestamp}&r=${random}`;
     
     setVideoSrc(finalVideo);
   };
@@ -26,17 +28,17 @@ export default function Home() {
     // 클라이언트에서만 초기 영상 설정
     if (typeof window !== 'undefined') {
       // 랜덤 인덱스로 시작
-      const randomIndex = Math.floor(Math.random() * videoList.length);
+      const randomIndex = Math.floor(Math.random() * VIDEO_LIST.length);
       setCurrentVideoIndex(randomIndex);
       
       // 캐시 버스터 추가
       const timestamp = Date.now();
       const random = Math.floor(Math.random() * 10000);
-      const finalVideo = `${videoList[randomIndex]}?v=${timestamp}&r=${random}`;
+      const finalVideo = `${VIDEO_LIST[randomIndex]}?v=${timestamp}&r=${random}`;
       
       setVideoSrc(finalVideo);
     }
-  }, []);
+  }, []); // 의존성 배열을 빈 배열로 변경 (최초 한 번만 실행)
 
   return (
     <Layout>
@@ -52,6 +54,8 @@ export default function Home() {
                 autoPlay
                 muted
                 playsInline
+                preload="metadata"
+                poster="/images/bg_poster.jpg"
                 onEnded={playNextVideo}
                 className="w-full h-full object-cover object-center scale-105"
                 style={{
@@ -79,7 +83,7 @@ export default function Home() {
         <div className="relative z-10 text-left text-white w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4 animate-fade-in max-w-3xl">
             <div className="relative">
-              <h1 className="text-2xl md:text-4xl lg:text-6xl mb-4 leading-none tracking-tighter">
+              <h1 className="text-2xl md:text-4xl lg:text-6xl mb-5 leading-none tracking-tighter">
                 <span className="font-semibold">우리의 AI 기술은 이미,</span>
                 <br />
                 <span className="text-2xl md:text-3xl lg:text-5xl font-light">당신의 비즈니스 현장에 있습니다.</span>
@@ -88,7 +92,7 @@ export default function Home() {
             
             <p className="text-base md:text-xl lg:text-2xl font-light text-gray-200 max-w-3xl leading-relaxed tracking-tight">
               AI와 빅데이터를 중소기업 현장에 실제로 적용하는<br />
-              <span className="font-semibold text-white">가장 현실적인 파트너</span>를 만나보세요.
+              <span className="font-semibold text-white mt-1 inline-block">가장 현실적인 파트너</span>를 만나보세요.
             </p>
             
             <div className="pt-5 flex justify-start">
@@ -107,7 +111,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <div className="absolute bottom-4 inset-x-0 flex justify-center text-white" style={{animation: 'gentle-bounce 1.2s ease-in-out infinite'}}>
           <svg className="w-10 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <rect x="8" y="6" width="8" height="12" rx="4" strokeWidth={1.5} />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 10v2" />
@@ -116,11 +120,11 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-26 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <p className="text-sm font-medium text-gray-600 mb-5">
-              COMPANY
+              C O M P A N Y
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             기업의 혁신과 AI 전환을 돕는 회사
@@ -136,14 +140,14 @@ export default function Home() {
                 
               </div>
               
-              <p className="text-lg text-gray-700 leading- tracking-tight">
+              <p className="text-lg text-gray-700 leading-relaxed tracking-tight">
                 대한민국 <span className="font-bold text-gray-900">산업현장교수</span>이자 중소벤처기업부 <span className="font-bold text-gray-900">기술지도사</span>가 주도하는<br />
                 실행 중심의 AI·빅데이터 컨설팅 기업입니다.
               </p>
 
               <blockquote className="text-lg font-light text-gray-700 italic leading-relaxed mt-5">
-                "<span className="font-bold underline decoration-sky-400 decoration-2">현장에서 진짜 쓰이는 AI</span><br />
-                <span className="text-gray-900">기술보다 실행이 먼저입니다.</span>"
+                &quot;<span className="font-bold underline decoration-sky-400 decoration-2">현장에서 진짜 쓰이는 AI</span><br />
+                <span className="text-gray-900">기술보다 실행이 먼저입니다.</span>&quot;
               </blockquote>
 
               <a 
@@ -195,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-26 relative overflow-hidden">
+      <section id="services" className="py-24 relative overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
           <div
@@ -209,8 +213,8 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <p className="text-base font-medium text-gray-300 mb-5">
-             SERVICES
+            <p className="text-sm font-medium text-gray-300 mb-5">
+             S E R V I C E S
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
             생산성 향상을 위한 AI 솔루션
@@ -325,12 +329,12 @@ export default function Home() {
 
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-20 bg-white relative overflow-hidden">
+      <section id="solutions" className="py-24 bg-white relative overflow-hidden">
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <p className="text-base font-medium text-gray-600 mb-5">
-              SOLUTIONS
+            <p className="text-sm font-medium text-gray-600 mb-5">
+              S O L U T I O N S
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
             검증된 AI 솔루션 제공
@@ -479,7 +483,6 @@ export default function Home() {
           <div className="space-y-6 mb-12">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-2 tracking-tighter">검증된 기술 스택으로 효율적인 솔루션을 구현합니다!</h3>
-              {/*<p className="text-gray-600">검증된 기술 스택으로 효율적인 솔루션을 구현합니다</p>*/}
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
@@ -513,7 +516,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-30 relative overflow-hidden">
+      <section id="contact" className="py-32 relative overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
           <div
@@ -526,8 +529,8 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <p className="text-base font-medium text-gray-300 mb-5">
-            CONTACT
+            <p className="text-sm font-medium text-gray-300 mb-5">
+            C O N T A C T
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 tracking-normal">
             지금 바로 프로젝트를 시작해보세요!

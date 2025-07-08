@@ -35,6 +35,9 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <p className="text-sm text-gray-600 mb-5">
+              S E R V I C E S
+            </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
               AI·빅데이터 기반 기획 및 솔루션
             </h2>
