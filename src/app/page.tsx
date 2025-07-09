@@ -3,7 +3,7 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   title: "빅데이터기술연구원(주) - AI와 빅데이터를 현실로 만드는 파트너",
-  description: "대한민국 산업현장교수가 이끄는 실행 중심 AI·빅데이터 컨설팅 전문 기업. 중소기업 현장에 적용되는 실질적인 AI 솔루션과 정부지원사업 자문을 제공합니다.",
+  description: "산업현장교수가 이끄는 AI·빅데이터 컨설팅 전문기업. 중소기업 맞춤 AI솔루션과 정부지원사업 자문 제공",
   keywords: ["AI", "빅데이터", "인공지능", "머신러닝", "데이터분석", "컨설팅", "산업현장교수", "기술지도사", "정부지원사업", "중소기업"],
   authors: [{ name: "빅데이터기술연구원(주)" }],
   creator: "빅데이터기술연구원(주)",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "빅데이터기술연구원(주) - AI와 빅데이터를 현실로 만드는 파트너",
-    description: "대한민국 산업현장교수가 이끄는 실행 중심 AI·빅데이터 컨설팅 전문 기업. 중소기업 현장에 적용되는 실질적인 AI 솔루션과 정부지원사업 자문을 제공합니다.",
+    description: "산업현장교수가 이끄는 AI·빅데이터 컨설팅 전문기업. 중소기업 맞춤 AI솔루션과 정부지원사업 자문 제공",
     url: "https://bigdt.co.kr",
     siteName: "빅데이터기술연구원(주)",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "빅데이터기술연구원(주) - AI와 빅데이터를 현실로 만드는 파트너",
-    description: "대한민국 산업현장교수가 이끄는 실행 중심 AI·빅데이터 컨설팅 전문 기업. 중소기업 현장에 적용되는 실질적인 AI 솔루션과 정부지원사업 자문을 제공합니다.",
+    description: "산업현장교수가 이끄는 AI·빅데이터 컨설팅 전문기업. 중소기업 맞춤 AI솔루션과 정부지원사업 자문 제공",
     images: ["/images/og-image.jpg"],
   },
   robots: {
@@ -87,7 +87,7 @@ const structuredData = {
   "sameAs": [
     "https://www.bigdt.co.kr"
   ],
-  "description": "대한민국 산업현장교수가 이끄는 실행 중심 AI·빅데이터 컨설팅 전문 기업. 중소기업 현장에 적용되는 실질적인 AI 솔루션과 정부지원사업 자문을 제공합니다.",
+  "description": "산업현장교수가 이끄는 AI·빅데이터 컨설팅 전문기업. 중소기업 맞춤 AI솔루션과 정부지원사업 자문 제공",
   "knowsAbout": [
     "인공지능",
     "빅데이터",
