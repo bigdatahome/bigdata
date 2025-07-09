@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     icon: '/images/favicon.ico',
     apple: '/images/favicon.ico',
   },
+  other: {
+    'naver-site-verification': '2aa503f202e40ef4787b1d99012192e7d3e01122',
+  },
 };
 
 export default function RootLayout({
