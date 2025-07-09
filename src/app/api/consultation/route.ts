@@ -1,115 +1,51 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { submitConsultation } from '@/lib/supabase'
 
-// OAuth 방식으로 SMS 발송 함수
-async function sendSMSDirectly(phoneNumber: string, message: string, refkey: string) {
+// 닷홈 SMS API로 SMS 발송 함수
+async function sendSMSViaDotcom(name: string, phone: string, consultationCode: string) {
   try {
-    const gabiaCredentials = process.env.GABIA_SMS_TOKEN; // SMS_ID:API_KEY 형태
-    const callbackNumber = process.env.GABIA_CALLBACK_NUMBER;
+    const dotcomSmsUrl = process.env.DOTCOM_SMS_API_URL || 'http://shaunkim.me/sms/api/send_sms.php';
     
-    console.log('🔧 OAuth SMS 발송 시작');
-    console.log('- 수신번호:', phoneNumber);
-    console.log('- 발신번호:', callbackNumber);
-    console.log('- 메시지 길이:', message.length);
-    console.log('- Refkey:', refkey);
+    console.log('🔧 닷홈 SMS API 호출 시작');
+    console.log('- 이름:', name);
+    console.log('- 연락처:', phone);
+    console.log('- 상담코드:', consultationCode);
+    console.log('- API URL:', dotcomSmsUrl);
     
-    if (!gabiaCredentials || !callbackNumber) {
-      throw new Error('SMS 환경변수가 설정되지 않았습니다.');
-    }
-
-    // SMS_ID:API_KEY 파싱
-    const [smsId, apiKey] = gabiaCredentials.split(':');
+    const requestData = {
+      name: name,
+      phone: phone,
+      consultationCode: consultationCode
+    };
     
-    console.log('🔍 인증 정보:');
-    console.log('- SMS_ID:', smsId);
-    console.log('- API_KEY 길이:', apiKey?.length || 0);
+    console.log('📤 닷홈 SMS API 요청:', requestData);
     
-    if (!smsId || !apiKey) {
-      throw new Error('GABIA_SMS_TOKEN 형식이 올바르지 않습니다. SMS_ID:API_KEY 형태로 설정해주세요.');
-    }
-
-    // 1단계: OAuth 토큰 획득 (SMS_ID:API_KEY를 Base64 인코딩)
-    console.log('📤 1단계: OAuth 토큰 요청...');
-    
-    const authToken = Buffer.from(`${smsId}:${apiKey}`).toString('base64');
-    
-    const authHeaders = new Headers();
-    authHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-    authHeaders.append("Authorization", `Basic ${authToken}`);
-    
-    const authBody = new URLSearchParams();
-    authBody.append("grant_type", "client_credentials");
-
-    const authResponse = await fetch("https://sms.gabia.com/oauth/token", {
-      method: "POST",
-      headers: authHeaders,
-      body: authBody,
+    const response = await fetch(dotcomSmsUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
     });
     
-    const authResult = await authResponse.text();
-    console.log('📥 OAuth 응답:', authResponse.status, authResult);
-
-    if (!authResponse.ok) {
-      throw new Error(`OAuth 실패: ${authResult}`);
-    }
-
-    // 액세스 토큰 추출
-    const authData = JSON.parse(authResult);
-    const accessToken = authData.access_token;
+    const result = await response.text();
+    console.log('📥 닷홈 SMS API 응답:', response.status, result);
     
-    console.log('✅ OAuth 토큰 획득 성공');
-
-    // 2단계: SMS_ID:ACCESS_TOKEN으로 새로운 인증 토큰 생성
-    console.log('📤 2단계: SMS 발송용 토큰 생성...');
-    
-    console.log('- SMS_ID:', smsId);
-    console.log('- ACCESS_TOKEN 앞 20자:', accessToken.substring(0, 20) + '...');
-    
-    // SMS_ID:ACCESS_TOKEN으로 새로운 토큰 생성
-    const smsTokenString = `${smsId}:${accessToken}`;
-    const smsToken = Buffer.from(smsTokenString).toString('base64');
-    
-    console.log('- 새로운 SMS 토큰 생성 완료');
-
-    // 3단계: SMS 발송
-    console.log('📤 3단계: SMS 발송...');
-    
-    const smsHeaders = new Headers();
-    smsHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-    smsHeaders.append("Authorization", `Basic ${smsToken}`); // 새로운 토큰 사용
-    
-    const smsBody = new URLSearchParams();
-    smsBody.append("phone", phoneNumber);
-    smsBody.append("callback", callbackNumber);
-    smsBody.append("message", message);
-    smsBody.append("refkey", refkey);
-
-    const smsResponse = await fetch("https://sms.gabia.com/api/send/sms", {
-      method: "POST",
-      headers: smsHeaders,
-      body: smsBody,
-    });
-    
-    const smsResult = await smsResponse.text();
-    console.log('📥 SMS 응답:', smsResponse.status, smsResult);
-    
-    // 토큰 오류인 경우 도움말 출력
-    if (smsResult.includes('invalid_token') || smsResult.includes('잘못된 토큰')) {
-      console.log('');
-      console.log('🚨 토큰 오류 해결 방법:');
-      console.log('1. 가비아 SMS 관리 페이지에서 사용자ID와 API키 확인');
-      console.log('2. 환경변수를 "SMS_ID:API_KEY" 형태로 설정 (Base64 인코딩 없이)');
-      console.log('3. 예시: GABIA_SMS_TOKEN=phd1472:your_api_key_here');
-      console.log('');
+    let responseData;
+    try {
+      responseData = JSON.parse(result);
+    } catch (e) {
+      console.error('❌ 응답 JSON 파싱 실패:', result);
+      throw new Error('SMS API 응답 형식 오류');
     }
     
     return {
-      success: smsResponse.ok && !smsResult.includes('invalid_token'),
-      status: smsResponse.status,
-      response: smsResult
+      success: response.ok && responseData.success,
+      status: response.status,
+      response: responseData
     };
   } catch (error) {
-    console.error('❌ OAuth SMS 발송 오류:', error);
+    console.error('❌ 닷홈 SMS 발송 오류:', error);
     throw error;
   }
 }
@@ -217,47 +153,33 @@ export async function POST(request: NextRequest) {
 
     console.log('✅ Supabase 저장 완료');
 
-    // SMS 알림 발송 (직접 호출)
+    // SMS 알림 발송 (닷홈 API 호출)
     if (result && result.length > 0) {
       try {
         const consultation = result[0];
-        const adminPhone = process.env.ADMIN_PHONE_NUMBER;
         
-        console.log('📱 OAuth SMS 발송 시작:');
-        console.log('- 관리자 번호:', adminPhone);
+        console.log('📱 닷홈 SMS 발송 시작:');
         console.log('- view_token:', consultation.view_token);
         
-        if (adminPhone && consultation.view_token) {
-          // https:// 제거한 짧은 링크 생성
-          const baseUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace('https://', '') || 'bigdt.co.kr';
-          const shortLink = `${baseUrl}/v/${consultation.view_token}`;
-          
-          const smsMessage = `[상담문의 도착]
-이름: ${sanitizedData.name}
-연락처: ${sanitizedData.phone}
-링크: ${shortLink}`;
-
-          console.log('📤 SMS 메시지:', smsMessage);
-
-          // OAuth 방식으로 SMS 발송
-          const smsResult = await sendSMSDirectly(
-            adminPhone,
-            smsMessage,
-            `CONSULTATION_${consultation.id}_${Date.now()}`
+        if (consultation.view_token) {
+          // 닷홈 SMS API로 발송
+          const smsResult = await sendSMSViaDotcom(
+            sanitizedData.name,
+            sanitizedData.phone,
+            consultation.view_token
           );
           
           if (smsResult.success) {
-            console.log('✅ OAuth SMS 발송 성공');
+            console.log('✅ 관리자 SMS 발송 성공');
           } else {
-            console.error('❌ OAuth SMS 발송 실패:', smsResult.response);
+            console.error('🚨 관리자 SMS 발송 실패! 수동 확인 필요');
+            console.error('오류:', smsResult.response?.error || '알 수 없는 오류');
           }
         } else {
-          console.log('⚠️ SMS 발송 건너뜀: 환경변수 또는 토큰 누락');
-          console.log('- adminPhone:', !!adminPhone);
-          console.log('- view_token:', !!consultation.view_token);
+          console.error('🚨 view_token 누락으로 SMS 발송 실패');
         }
       } catch (smsError) {
-        console.error('❌ OAuth SMS 발송 중 오류:', smsError);
+        console.error('❌ 닷홈 SMS 발송 중 오류:', smsError);
         // SMS 실패해도 상담 접수는 성공으로 처리
       }
     }
