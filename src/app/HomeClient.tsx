@@ -142,8 +142,8 @@ export default function HomeClient() {
               </div>
               
               <p className="text-lg text-gray-700 leading-relaxed tracking-tight">
-                대한민국 <span className="font-bold text-gray-900">산업현장교수</span>이자 중소벤처기업부 <span className="font-bold text-gray-900">기술지도사</span>가<br className="hidden md:block" />주도하는
-                실행 중심의 AI·빅데이터 컨설팅 기업입니다.
+                대한민국 <span className="font-bold text-gray-900">산업현장교수</span>이자 중소벤처기업부<br className="block md:hidden" /><span className="font-bold text-gray-900">기술지도사</span>가<br className="hidden md:block" />주도하는
+                실행 중심의 AI·빅데이터 <br className="block md:hidden" />컨설팅 기업입니다.
               </p>
 
               <blockquote className="text-lg font-light text-gray-700 italic leading-relaxed mt-5">
