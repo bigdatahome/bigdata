@@ -295,7 +295,7 @@ export default function ContactPage() {
               연락처 정보
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              빅데이터기술연구원(주)는 항상 열려 있습니다<br />
+              빅데이터기술연구원(주)는 항상 열려 있습니다 <br />
               담당자가 신속하게 응답해드리겠습니다
             </p>
           </div>

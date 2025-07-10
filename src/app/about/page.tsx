@@ -34,7 +34,7 @@ const personStructuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "배종옥",
-  "jobTitle": "대표이사",
+        "jobTitle": "원장",
   "worksFor": {
     "@type": "Organization",
     "name": "빅데이터기술연구원(주)"

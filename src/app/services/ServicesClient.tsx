@@ -78,10 +78,11 @@ export default function ServicesClient() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">정부지원사업 자문</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">기술지도사 자격사업</h3>
               <p className="text-gray-700 leading-relaxed text-center">
-                벤처기업 인증, 연구소 설립<br />
-                사업계획서 작성 등 전문 자문
+              경영기술지도사법 제17242호에 의거<br />
+              신고 → 신청 → 진술 → 보고 등의 대행<br />
+              벤처기업 인증, 연구소 설립 등
               </p>
             </div>
           </div>
@@ -185,27 +186,27 @@ export default function ServicesClient() {
                   </svg>
                 </div>
                 <div className="w-2/3">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">정부지원사업</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">연구개발 기술지도</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3"></div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">벤처기업 인증 지원</h4>
-                        <p className="text-sm text-gray-600">벤처기업 확인 신청 지원</p>
+                        <h4 className="font-semibold text-gray-900">연구노트 관리</h4>
+                        <p className="text-sm text-gray-600">연구 과제 선정, 연구노트 기록</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3"></div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">R&D 세액공제 신청</h4>
-                        <p className="text-sm text-gray-600">연구개발비 세액공제 지원</p>
+                        <h4 className="font-semibold text-gray-900">R&D 세액공제 관리</h4>
+                        <p className="text-sm text-gray-600">실험비, 인건비, 공동연구비</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3"></div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">정부지원사업 기획</h4>
-                        <p className="text-sm text-gray-600">사업 계획서 작성 및 제출</p>
+                        <h4 className="font-semibold text-gray-900">연구소 자격 유지 관리</h4>
+                        <p className="text-sm text-gray-600">물적요건, 인적요건, 활동보고</p>
                       </div>
                     </div>
                   </div>

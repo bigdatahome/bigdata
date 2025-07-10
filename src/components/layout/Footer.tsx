@@ -35,7 +35,11 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-gray-900 font-medium">전화</p>
-                <p>010-5234-3535</p>
+                <p>042-322-3300</p>
+              </div>
+              <div>
+                <p className="text-gray-900 font-medium">팩스</p>
+                <p>042-322-3301</p>
               </div>
               <div>
                 <p className="text-gray-900 font-medium">이메일</p>
@@ -59,7 +63,7 @@ export default function Footer() {
                 </div>
                 <div className="text-left">
                   <p className="text-gray-900 font-medium text-left">기술지도사사무소</p>
-                  <p className="text-left">등록 제4380호</p>
+                  <p className="text-left">기술혁신관리 분야 22기 등록 제4380호</p>
                 </div>
               </div>
               <div className="text-left">
@@ -72,11 +76,12 @@ export default function Footer() {
                   <span className="text-gray-900 font-medium">고용노동부</span>
                 </div>
                 <div className="text-left">
-                  <p className="text-gray-900 font-medium text-left">대한민국 산업현장교수</p>
-                  <p className="text-left">제2018-04-006호</p>
+                  <p className="text-gray-900 font-medium text-left">대한민국산업현장교수</p>
+                  <p className="text-left">정보통신분야 11기 제2018-04-006호</p>
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
 
@@ -84,14 +89,14 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-200">
           <div className="text-center space-y-2">
             <p className="text-gray-700 text-sm">
-              <span className="block md:inline">빅데이터기술연구원(주)&nbsp;&nbsp;대표이사 : 배종옥</span>
+              <span className="block md:inline">빅데이터기술연구원(주)&nbsp;&nbsp;원장 : 배종옥</span>
               
               <span className="block md:inline mx-2">사업자등록번호 : 271-88-01540</span>
             </p>
             <p className="text-gray-500 text-xs">
-              <span className="block md:inline mx-2">중소벤처기업부 등록 제4380호 기술지도사사무소</span>
+              <span className="block md:inline mx-2">중소벤처기업부 기술혁신관리 분야 22기 등록 제4380호 기술지도사사무소</span>
               
-              <span className="block md:inline">고용노동부 대한민국 산업현장교수 제2018-04-006호</span>
+              <span className="block md:inline">고용노동부 대한민국산업현장교수 정보통신분야 11기 제2018-04-006호</span>
             </p>
             <p className="text-gray-700 text-sm pt-2">
               © 2025 BIGDATA T.I. Co., Ltd. All rights reserved.

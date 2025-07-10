@@ -45,7 +45,7 @@ export default function SolutionsClient() {
               실전 프로젝트 경험
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              실제 고객사와 진행한 AI·빅데이터 프로젝트들로<br />
+              실제 고객사와 진행한 AI·빅데이터 프로젝트들로<br className="block md:hidden" />
               기술적 역량과 현장 적용 능력을 검증받았습니다
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function SolutionsClient() {
               핵심 기술 역량
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              최신 기술 스택을 활용한 효율적이고<br />
+              최신 기술 스택을 활용한 효율적이고<br className="block md:hidden" />
               비용 최적화된 솔루션을 제공합니다
             </p>
           </div>

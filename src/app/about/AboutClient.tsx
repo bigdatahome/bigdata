@@ -44,7 +44,7 @@ export default function AboutClient() {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             <span className="block md:inline">30년 이상의 IT 컨설팅 경험과 정부 인증 </span>
-            <span className="block md:inline">바탕으로<br className="hidden md:block" />
+                          <span className="block md:inline">바탕으로
               기업의 디지털 전환을 이끌어갑니다</span>
             </p>
           </div>
@@ -60,12 +60,12 @@ export default function AboutClient() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">대한민국 산업현장교수</h3>
+                  <h3 className="text-xl font-bold text-gray-900">대한민국산업현장교수</h3>
                   <p className="text-sm text-gray-600">고용노동부 제2018-04-006호</p>
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">
-              기업 현장에서 실제로 필요한 기술 교육과 컨설팅을 제공하며,<br className="hidden md:block" />
+                              기업 현장에서 실제로 필요한 기술 교육과 컨설팅을 제공하며,<br className="hidden md:block" />
                 이론과 실무를 연결하는 교육 프로그램을 운영합니다.
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function AboutClient() {
               주요 활동 분야
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              다양한 분야에서 축적된 경험을 바탕으로<br />
+              다양한 분야에서 축적된 경험을 바탕으로<br className="block md:hidden" />
               실질적인 솔루션을 제공합니다
             </p>
           </div>
@@ -158,7 +158,7 @@ export default function AboutClient() {
               협력 네트워크
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              다양한 기관과의 협력을 통해<br />
+              다양한 기관과의 협력을 통해<br className="block md:hidden" />
               더 나은 서비스를 제공합니다
             </p>
           </div>
@@ -173,7 +173,7 @@ export default function AboutClient() {
                 />
               </div>
               <h3 className="text-base font-semibold text-gray-900 mb-1">대한민국산업현장교수단</h3>
-              <p className="text-sm text-gray-600">전문 교육 네트워크</p>
+              <p className="text-sm text-gray-600">분야별 동료 교수</p>
             </div>
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-200 text-center">
@@ -185,7 +185,7 @@ export default function AboutClient() {
                 />
               </div>
               <h3 className="text-base font-semibold text-gray-900 mb-1">한국경영기술지도사회</h3>
-              <p className="text-sm text-gray-600">컨설팅 전문 단체</p>
+              <p className="text-sm text-gray-600">분야별 동료 지도사</p>
             </div>
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-200 text-center">
@@ -197,19 +197,24 @@ export default function AboutClient() {
                 />
               </div>
               <h3 className="text-base font-semibold text-gray-900 mb-1">국립대학교 연구실</h3>
-              <p className="text-sm text-gray-600">한밭대·충남대 협력</p>
+              <p className="text-sm text-gray-600">한밭대 AI·충남대 빅데이터 협력</p>
             </div>
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-200 text-center">
-              <div className="flex items-center justify-center mx-auto mb-4">
+              <div className="flex items-center justify-center mx-auto mb-4 space-x-2">
                 <img
                   src="/images/sslogo3.png"
                   alt="기술 네트워크 로고"
                   className="w-12 h-12 object-contain"
                 />
+                <img
+                  src="/images/sslogo5.png"
+                  alt="기술 네트워크 로고"
+                  className="w-12 h-12 object-contain"
+                />
               </div>
-              <h3 className="text-base font-semibold text-gray-900 mb-1">기술 네트워크</h3>
-              <p className="text-sm text-gray-600">산학연 협력</p>
+              <h3 className="text-base font-semibold text-gray-900 mb-1">학회 활동</h3>
+              <p className="text-sm text-gray-600">정보보호학회·인공지능학회 등</p>
             </div>
           </div>
         </div>
@@ -218,29 +223,20 @@ export default function AboutClient() {
       {/* CEO Message */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
               CEO 메시지
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              30년 이상의 IT 경험과 정부 인증 자격을 바탕으로<br />
-              기업의 실질적인 AI 전환을 돕겠습니다
-            </p>
           </div>
 
-          <div className="bg-gray-50 p-8 rounded-3xl">
-            <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-6">
-              &quot;AI 기술은 현장에서 실제로 사용될 때 진정한 가치를 발합니다. 
-              우리는 이론보다는 실행을, 기술보다는 적용을 중시합니다. 
-              중소기업이 AI 혁신을 통해 경쟁력을 확보할 수 있도록 
-              가장 현실적이고 효과적인 솔루션을 제공하겠습니다.&quot;
+          <div className="bg-gray-100 p-8 rounded-3xl">
+            <blockquote className="text-center text-lg text-gray-800 italic leading-relaxed mb-6">
+              &quot;20년 현장 경험과 2개 국립대학 AI 분야 공학 박사 연구로 검증된<br />
+              MVP 기반 AI 솔루션을 고객과 함께 실용화합니다.&quot;
             </blockquote>
-            <footer className="text-right">
+            <footer className="text-center">
               <cite className="text-gray-900 font-semibold">
-                배종옥 대표이사<br />
-                <span className="text-sm text-gray-600">
-                  대한민국 산업현장교수 · 중소벤처기업부 기술지도사
-                </span>
+                원장 배종옥
               </cite>
             </footer>
           </div>

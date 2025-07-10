@@ -81,18 +81,23 @@ export default function HomeClient() {
         
         {/* Hero Content */}
         <div className="relative z-10 text-left text-white w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4 animate-fade-in max-w-3xl">
+          <div className="space-y-4 animate-fade-in">
             <div className="relative">
-              <h1 className="text-2xl md:text-4xl lg:text-6xl mb-5 leading-none tracking-tighter">
-                <span className="font-semibold">우리의 AI 기술은 이미,</span>
-                <br />
-                <span className="text-2xl md:text-3xl lg:text-5xl font-light">당신의 비즈니스 현장에 있습니다.</span>
+              <h1 className="text-5xl md:text-5xl lg:text-6xl mb-6 font-bold leading-tight">
+                <span className="block md:inline">어떤 AI 기능을</span>
+                <span className="block md:inline"> 생각하시나요?</span>
               </h1>
             </div>
             
-            <p className="text-base md:text-xl lg:text-2xl font-light text-gray-200 max-w-3xl leading-relaxed tracking-tight">
-              AI와 빅데이터를 중소기업 현장에 실제로 적용하는<br />
-              <span className="font-semibold text-white mt-1 inline-block">가장 현실적인 파트너</span>를 만나보세요.
+            <p className="text-3xl md:text-2xl lg:text-3xl font-light text-gray-200 leading-relaxed">
+              <span className="block md:inline">빠르게 효과를 체험할 수 있는</span>
+              <span className="block md:inline"> <span className="font-semibold text-white">MVP부터 상담하세요</span></span>
+            </p>
+            
+            {/* MVP 설명 추가 */}
+            <p className="text-base md:text-sm text-gray-300 mt-2 font-light">
+            <span className="block md:inline">* MVP(Minimum Viable Product)란 </span>
+            <span className="block md:inline">최소 기능 제품을 말합니다</span>
             </p>
             
             <div className="pt-5 flex justify-start">
@@ -142,7 +147,7 @@ export default function HomeClient() {
               </div>
               
               <p className="text-lg text-gray-700 leading-relaxed tracking-tight">
-                대한민국 <span className="font-bold text-gray-900">산업현장교수</span>이자 중소벤처기업부<br className="block md:hidden" /><span className="font-bold text-gray-900">기술지도사</span>가<br className="hidden md:block" />주도하는
+                <span className="font-bold text-gray-900">대한민국산업현장교수</span>이자 중소벤처기업부 <br className="block md:hidden" /><span className="font-bold text-gray-900">기술지도사</span>가<br className="hidden md:block" />주도하는
                 실행 중심의 AI·빅데이터 <br className="block md:hidden" />컨설팅 기업입니다.
               </p>
 
@@ -177,7 +182,7 @@ export default function HomeClient() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between pb-2">
                       <span className="text-gray-500 text-sm">설립연도</span>
-                      <span className="font-bold text-sm">2019. 7</span>
+                      <span className="font-bold text-sm">2015.07</span>
                     </div>
                     <div className="flex items-center justify-between pb-2">
                       <span className="text-gray-500 text-sm">핵심분야</span>
@@ -189,7 +194,7 @@ export default function HomeClient() {
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-gray-500 text-sm">대표자격</span>
-                      <span className="font-bold text-sm">산업현장교수 · 기술지도사</span>
+                      <span className="font-bold text-sm">대한민국산업현장교수 · 기술지도사</span>
                     </div>
                   </div>
                 </div>
@@ -346,7 +351,7 @@ export default function HomeClient() {
           <span className="block md:inline">시작하세요</span>
           </h2>
           <p className="text-xl md:text-2xl font-light text-gray-300 mb-8">
-          <span className="block md:inline">산업현장교수와 기술지도사가</span>
+                        <span className="block md:inline">대한민국산업현장교수와 기술지도사가</span>
           <span className="block md:inline">직접 상담해드립니다</span>
           </p>
           
