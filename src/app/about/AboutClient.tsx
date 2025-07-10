@@ -22,7 +22,8 @@ export default function AboutClient() {
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-            &quot;AI는 현장에 닿을 때 진짜 기술이 됩니다&quot;
+          <span className="block md:inline">&quot;AI는 현장에 닿을 때 진짜</span>
+          <span className="block md:inline">기술이 됩니다&quot;</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 font-light mb-8 tracking-tight">
             대표 철학에서 출발한 실천 중심 접근법
@@ -42,8 +43,9 @@ export default function AboutClient() {
               빅데이터기술연구원(주)
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              30년 이상의 IT 컨설팅 경험과 정부 인증 자격을 바탕으로<br />
-              기업의 디지털 전환을 이끌어갑니다
+            <span className="block md:inline">30년 이상의 IT 컨설팅 경험과 정부 인증 </span>
+            <span className="block md:inline">바탕으로<br className="hidden md:block" />
+              기업의 디지털 전환을 이끌어갑니다</span>
             </p>
           </div>
 
@@ -63,7 +65,7 @@ export default function AboutClient() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                기업 현장에서 실제로 필요한 기술 교육과 컨설팅을 제공하며,<br />
+              기업 현장에서 실제로 필요한 기술 교육과 컨설팅을 제공하며,<br className="hidden md:block" />
                 이론과 실무를 연결하는 교육 프로그램을 운영합니다.
               </p>
             </div>
@@ -83,7 +85,7 @@ export default function AboutClient() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                중소기업의 기술 혁신과 경영 개선을 위한 전문 컨설팅을 제공하며,<br />
+                중소기업의 기술 혁신과 경영 개선을 위한 전문 컨설팅을 제공하며,<br className="hidden md:block" />
                 정부 지원사업 기획 및 실행을 지원합니다.
               </p>
             </div>

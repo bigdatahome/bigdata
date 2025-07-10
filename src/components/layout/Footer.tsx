@@ -84,10 +84,14 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-200">
           <div className="text-center space-y-2">
             <p className="text-gray-700 text-sm">
-              빅데이터기술연구원(주) | 대표이사: 배종옥 | 사업자등록번호: 271-88-01540
+              <span className="block md:inline">빅데이터기술연구원(주)&nbsp;&nbsp;대표이사 : 배종옥</span>
+              
+              <span className="block md:inline mx-2">사업자등록번호 : 271-88-01540</span>
             </p>
             <p className="text-gray-500 text-xs">
-              중소벤처기업부 등록 제4380호 기술지도사사무소 | 고용노동부 대한민국 산업현장교수 제2018-04-006호
+              <span className="block md:inline mx-2">중소벤처기업부 등록 제4380호 기술지도사사무소</span>
+              
+              <span className="block md:inline">고용노동부 대한민국 산업현장교수 제2018-04-006호</span>
             </p>
             <p className="text-gray-700 text-sm pt-2">
               © 2025 BIGDATA T.I. Co., Ltd. All rights reserved.

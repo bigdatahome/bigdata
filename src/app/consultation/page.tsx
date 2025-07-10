@@ -20,10 +20,12 @@ export default function ConsultationPage() {
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-            당신의 기업에 AI는 너무 이르다고 생각하시나요?
+          <span className="block md:inline">당신의 기업에 AI는 너무 </span>
+          <span className="block md:inline">이르다고 생각하시나요?</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 font-light mb-8 tracking-tight">
-            중소기업을 위한 실전 AI 컨설팅, 지금도 늦지 않았습니다.
+          <span className="block md:inline">중소기업을 위한 실전 AI 컨설팅, </span>
+          <span className="block md:inline">지금도 늦지 않았습니다.</span>
           </p>
           <div className="w-16 h-1 bg-white mx-auto"></div>
         </div>
@@ -34,7 +36,8 @@ export default function ConsultationPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-              Q. 이런 고민, 익숙하지 않으신가요?
+            <span className="block md:inline">Q. 이런 고민, 익숙하지 </span>
+            <span className="block md:inline">않으신가요?</span>
             </h2>
           </div>
           
@@ -44,7 +47,8 @@ export default function ConsultationPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <p className="text-gray-700 leading-relaxed tracking-tight">
-                사람은 부족하고, 데이터는 쌓이는데 활용법을 모르겠다.
+              <span className="block md:inline">사람은 부족하고, 데이터는 쌓이는데 </span>
+              <span className="block md:inline">활용법을 모르겠다.</span>
               </p>
             </div>
             
@@ -62,7 +66,8 @@ export default function ConsultationPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <p className="text-gray-700 leading-relaxed tracking-tight">
-                AI가 좋다는 건 알지만, 우리 회사에 어떻게 적용해야 할지 모르겠다.
+              <span className="block md:inline">익숙하지 않은 AI가 좋다는 건 알지만, </span>
+              <span className="block md:inline">우리 회사에 어떻게 적용해야 할지 모르겠다.</span>
               </p>
             </div>
           </div>
@@ -79,7 +84,8 @@ export default function ConsultationPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-              A. 그래서 저희는 &lsquo;현장 중심 AI 컨설팅&rsquo;을 제공합니다
+            <span className="block md:inline">A. 그래서 저희는 &lsquo;현장 중심 </span>
+            <span className="block md:inline">AI 컨설팅&rsquo;을 제공합니다</span>
             </h2>
           </div>
           
@@ -107,7 +113,8 @@ export default function ConsultationPage() {
 
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-            당신의 데이터를 실전에서 작동하게 만듭니다!
+            <span className="block md:inline">당신의 데이터를 실전에서 </span>
+            <span className="block md:inline">작동하게 만듭니다!</span>
             </h2>
           </div>
           
@@ -115,7 +122,7 @@ export default function ConsultationPage() {
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <div className="w-3 h-3 bg-black rounded-full mr-3"></div>
-                <span className="text-lg font-semibold text-gray-900 tracking-tight">30년 이상 IT 기반 컨설팅 및 개발 실무 경험</span>
+                <span className="text-lg font-semibold text-gray-900 tracking-tight">30년 이상 IT 기반 컨설팅, 개발 실무 경험</span>
               </div>
               <div className="flex items-center mb-4">
                 <div className="w-3 h-3 bg-black rounded-full mr-3"></div>
@@ -146,7 +153,8 @@ export default function ConsultationPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-              실제로 이런 기업들이 함께 했습니다.
+            <span className="block md:inline">실제로 이런 기업들이 함께 </span>
+            <span className="block md:inline">했습니다.</span>
             </h2>
           </div>
           

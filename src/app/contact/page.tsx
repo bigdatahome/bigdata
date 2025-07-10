@@ -122,7 +122,8 @@ export default function ContactPage() {
             언제든지 편하게 연락해 주세요
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 font-light mb-8 tracking-tight">
-            AI 도입, 정부사업 자문, 기술 컨설팅 등 어떤 문의도 환영합니다
+          <span className="block md:inline">AI 도입, 정부사업 자문, 기술 컨설팅 등 </span>
+          <span className="block md:inline">어떤 문의도 환영합니다</span>
           </p>
           <div className="w-16 h-1 bg-white mx-auto"></div>
         </div>
@@ -136,7 +137,8 @@ export default function ContactPage() {
               1:1 문의하기
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              아래 항목을 작성하시면 담당자가 1일 이내 연락드립니다
+            <span className="block md:inline">아래 항목을 작성하시면 </span>
+            <span className="block md:inline">담당자가 1일 이내 연락드립니다</span>
             </p>
           </div>
 
@@ -346,7 +348,8 @@ export default function ContactPage() {
               운영 시간
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              아래 시간에 연락주시면 더욱 빠른 응답을 받으실 수 있습니다
+            <span className="block md:inline">아래 시간에 연락주시면 </span>
+            <span className="block md:inline">더욱 빠른 응답을 받으실 수 있습니다</span>
             </p>
           </div>
 

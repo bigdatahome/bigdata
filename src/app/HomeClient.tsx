@@ -127,7 +127,8 @@ export default function HomeClient() {
               C O M P A N Y
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            기업의 혁신과 AI 전환을 돕는 회사
+            <span className="block md:inline">기업의 혁신과 AI 전환을</span>
+            <span className="block md:inline"> 돕는 회사</span>
             </h2>
            
           </div>
@@ -141,7 +142,7 @@ export default function HomeClient() {
               </div>
               
               <p className="text-lg text-gray-700 leading-relaxed tracking-tight">
-                대한민국 <span className="font-bold text-gray-900">산업현장교수</span>이자 중소벤처기업부 <span className="font-bold text-gray-900">기술지도사</span>가 주도하는<br />
+                대한민국 <span className="font-bold text-gray-900">산업현장교수</span>이자 중소벤처기업부 <span className="font-bold text-gray-900">기술지도사</span>가<br className="hidden md:block" />주도하는
                 실행 중심의 AI·빅데이터 컨설팅 기업입니다.
               </p>
 
@@ -341,10 +342,12 @@ export default function HomeClient() {
       <section id="contact" className="py-24 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
-            당신의 AI 전환을 지금 시작하세요
+          <span className="block md:inline">당신의 AI 전환을 지금</span>
+          <span className="block md:inline">시작하세요</span>
           </h2>
           <p className="text-xl md:text-2xl font-light text-gray-300 mb-8">
-            산업현장교수와 기술지도사가 직접 상담해드립니다
+          <span className="block md:inline">산업현장교수와 기술지도사가</span>
+          <span className="block md:inline">직접 상담해드립니다</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
