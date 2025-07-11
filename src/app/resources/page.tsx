@@ -9,11 +9,20 @@ export const metadata: Metadata = {
     title: "자료실 - 빅데이터기술연구원(주)",
     description: "빅데이터기술연구원의 회사 카달로그, 연구개발 자료, 템플릿 등 다양한 자료를 다운로드하실 수 있습니다.",
     url: "https://bigdt.co.kr/resources",
+    images: [
+      {
+        url: "/api/og/resources?category=" + encodeURIComponent("전체보기") + "&count=3",
+        width: 1200,
+        height: 630,
+        alt: "빅데이터기술연구원(주) 자료실",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "자료실 - 빅데이터기술연구원(주)",
     description: "빅데이터기술연구원의 회사 카달로그, 연구개발 자료, 템플릿 등 다양한 자료를 다운로드하실 수 있습니다.",
+    images: ["/api/og/resources?category=" + encodeURIComponent("전체보기") + "&count=3"],
   },
   alternates: {
     canonical: "/resources",

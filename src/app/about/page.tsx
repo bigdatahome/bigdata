@@ -4,14 +4,14 @@ import AboutClient from "./AboutClient";
 export const metadata: Metadata = {
   title: "회사소개 - 빅데이터기술연구원(주)",
   description: "30년 이상 IT 컨설팅 경험의 대한민국 산업현장교수와 중소벤처기업부 기술지도사가 이끄는 AI·빅데이터 전문 기업입니다.",
-  keywords: ["회사소개", "빅데이터기술연구원", "산업현장교수", "기술지도사", "AI컨설팅", "빅데이터전문기업", "배종옥"],
+  keywords: ["회사소개", "빅데이터기술연구원", "산업현장교수", "기술지도사", "AI컨설팅", "빅데이터전문기업", "배종옥", "MVP 방법론", "빠른 AI 구현", "애자일 개발", "신속 프로토타이핑", "고객 중심 개발", "반복 개발"],
   openGraph: {
     title: "회사소개 - 빅데이터기술연구원(주)",
     description: "30년 이상 IT 컨설팅 경험의 대한민국 산업현장교수와 중소벤처기업부 기술지도사가 이끄는 AI·빅데이터 전문 기업입니다.",
     url: "https://bigdt.co.kr/about",
     images: [
       {
-        url: "/images/og-about.jpg",
+        url: "/api/og?title=" + encodeURIComponent("회사소개") + "&subtitle=" + encodeURIComponent("30년 이상 IT 컨설팅 경험의 전문 기업"),
         width: 1200,
         height: 630,
         alt: "빅데이터기술연구원(주) 회사소개",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "회사소개 - 빅데이터기술연구원(주)",
     description: "30년 이상 IT 컨설팅 경험의 대한민국 산업현장교수와 중소벤처기업부 기술지도사가 이끄는 AI·빅데이터 전문 기업입니다.",
-    images: ["/images/og-about.jpg"],
+    images: ["/api/og?title=" + encodeURIComponent("회사소개") + "&subtitle=" + encodeURIComponent("30년 이상 IT 컨설팅 경험의 전문 기업")],
   },
   alternates: {
     canonical: "/about",

@@ -4,7 +4,7 @@ import HomeClient from "./HomeClient";
 export const metadata: Metadata = {
   title: "빅데이터기술연구원(주) - AI와 빅데이터를 현실로 만드는 파트너",
   description: "산업현장교수가 이끄는 AI·빅데이터 컨설팅 전문기업. 중소기업 맞춤 AI솔루션과 정부지원사업 자문 제공",
-  keywords: ["AI", "빅데이터", "인공지능", "머신러닝", "데이터분석", "컨설팅", "산업현장교수", "기술지도사", "정부지원사업", "중소기업"],
+  keywords: ["AI", "빅데이터", "인공지능", "머신러닝", "데이터분석", "컨설팅", "산업현장교수", "기술지도사", "정부지원사업", "중소기업", "MVP", "AI MVP", "빠른 AI 구현", "신속 AI 도입", "AI 프로토타입", "맞춤형 AI", "AI 파일럿", "신속개발", "AI 최소기능제품", "빠른 AI 솔루션"],
   authors: [{ name: "빅데이터기술연구원(주)" }],
   creator: "빅데이터기술연구원(주)",
   publisher: "빅데이터기술연구원(주)",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "빅데이터기술연구원(주)",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/api/og?title=" + encodeURIComponent("빅데이터기술연구원(주)") + "&subtitle=" + encodeURIComponent("빠른 AI MVP와 신속 구현의 파트너"),
         width: 1200,
         height: 630,
         alt: "빅데이터기술연구원(주) - AI와 빅데이터 전문 기업",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "빅데이터기술연구원(주) - AI와 빅데이터를 현실로 만드는 파트너",
     description: "산업현장교수가 이끄는 AI·빅데이터 컨설팅 전문기업. 중소기업 맞춤 AI솔루션과 정부지원사업 자문 제공",
-    images: ["/images/og-image.jpg"],
+    images: ["/api/og?title=" + encodeURIComponent("빅데이터기술연구원(주)") + "&subtitle=" + encodeURIComponent("빠른 AI MVP와 신속 구현의 파트너")],
   },
   robots: {
     index: true,
@@ -83,7 +83,7 @@ const structuredData = {
     "@type": "Person",
     "name": "배종옥"
   },
-  "foundingDate": "2019-07",
+  "foundingDate": "2015-07",
   "sameAs": [
     "https://www.bigdt.co.kr"
   ],
@@ -95,7 +95,11 @@ const structuredData = {
     "데이터분석",
     "AI 컨설팅",
     "정부지원사업",
-    "기술지도"
+    "기술지도",
+    "AI MVP",
+    "빠른 프로토타이핑",
+    "신속 AI 도입",
+    "맞춤형 AI 솔루션"
   ],
   "areaServed": {
     "@type": "Country",
@@ -106,7 +110,11 @@ const structuredData = {
     "빅데이터 컨설팅",
     "정부지원사업 자문",
     "기술 교육",
-    "시스템 구축"
+    "시스템 구축",
+    "AI MVP 개발",
+    "빠른 AI 프로토타입",
+    "신속 AI 도입 컨설팅",
+    "맞춤형 AI 파일럿 프로젝트"
   ]
 };
 
