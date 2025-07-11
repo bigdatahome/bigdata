@@ -192,7 +192,7 @@ export default function ServicesClient() {
                       <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3"></div>
                       <div>
                         <h4 className="font-semibold text-gray-900">연구노트 관리</h4>
-                        <p className="text-sm text-gray-600">연구 과제 선정, 연구노트 기록</p>
+                        <p className="text-sm text-gray-600"><a href="/resources" className="text-orange-600 hover:text-gray-800">연구 과제 선정, 연구노트 기록</a></p>
                       </div>
                     </div>
                     <div className="flex items-start">
@@ -206,7 +206,7 @@ export default function ServicesClient() {
                       <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3"></div>
                       <div>
                         <h4 className="font-semibold text-gray-900">연구소 자격 유지 관리</h4>
-                        <p className="text-sm text-gray-600">물적요건, 인적요건, 활동보고</p>
+                        <p className="text-sm text-gray-600"><a href="/resources" className="text-orange-600 hover:text-gray-800">물적요건, 인적요건, 활동보고</a></p>
                       </div>
                     </div>
                   </div>
@@ -250,6 +250,19 @@ export default function ServicesClient() {
                 </div>
               </div>
             </div>
+          </div>
+          
+          {/* 자료실 이동 버튼 */}
+          <div className="text-center mt-12">
+            <Link
+              href="/resources"
+              className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors duration-200 text-lg font-medium shadow-lg"
+            >
+              <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              자료실에서 더 많은 정보 확인하기
+            </Link>
           </div>
         </div>
       </section>

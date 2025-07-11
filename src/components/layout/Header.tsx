@@ -60,6 +60,7 @@ export default function Header() {
             <Link href="/about" className={getLinkClassName('/about')}>About</Link>
             <Link href="/services" className={getLinkClassName('/services')}>Services</Link>
             <Link href="/solutions" className={getLinkClassName('/solutions')}>Solutions</Link>
+            <Link href="/resources" className={getLinkClassName('/resources')}>Resources</Link>
             <Link href="/contact" className={getLinkClassName('/contact')}>Contact</Link>
           </div>
 
@@ -124,6 +125,13 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Solutions
+              </Link>
+              <Link 
+                href="/resources" 
+                className={getMobileLinkClassName('/resources')}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Resources
               </Link>
               <Link 
                 href="/contact" 
