@@ -44,7 +44,7 @@ export default function HomeClient() {
     <Layout>
 
       {/* Hero Section with Background Video */}
-      <section id="home" className="relative h-[calc(85vh+65px)] flex items-center">
+      <section id="home" className="relative min-h-[calc(100vh+40px)] flex items-center">
         {/* Background Video with CRT scan lines */}
         <div className="absolute inset-0 overflow-hidden">
           {videoSrc ? (

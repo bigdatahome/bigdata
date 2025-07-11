@@ -48,7 +48,7 @@ export default function Header() {
                 className="w-9 h-9"
               />
               {/* 모바일에서 텍스트 숨김 */}
-              <span className="hidden md:block text-xl text-gray-900 tracking-tight">
+              <span className="hidden xl:block text-xl text-gray-900 tracking-tight">
                 <span className="font-bold">빅데이터</span>
                 <span className="font-light">기술연구원</span>
               </span>
@@ -56,7 +56,7 @@ export default function Header() {
           </div>
 
           {/* 데스크톱 네비게이션 */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-8">
             <Link href="/about" className={getLinkClassName('/about')}>About</Link>
             <Link href="/services" className={getLinkClassName('/services')}>Services</Link>
             <Link href="/solutions" className={getLinkClassName('/solutions')}>Solutions</Link>
@@ -66,9 +66,9 @@ export default function Header() {
           {/* 우측 버튼들 */}
           <div className="flex items-center space-x-4">
             {/* 상담 버튼 */}
-            <Link href="/consultation" className="relative bg-gray-900 text-white px-3 py-2 rounded-full hover:bg-gray-800 shadow-lg flex items-center justify-between min-w-[120px] md:min-w-[170px]">
-              <span className="text-base font-medium md:block hidden">&nbsp;&nbsp;MVP 체험하기</span>
-              <span className="text-sm font-medium md:hidden block">&nbsp;MVP 체험</span>
+            <Link href="/consultation" className="relative bg-gray-900 text-white px-3 py-2 rounded-full hover:bg-gray-800 shadow-lg flex items-center justify-between min-w-[120px] xl:min-w-[170px]">
+              <span className="text-base font-medium xl:block hidden">&nbsp;&nbsp;MVP 체험하기</span>
+              <span className="text-sm font-medium xl:hidden block">&nbsp;MVP 체험</span>
               <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center ml-3">
                 <img
                   src="/images/bold_black_arrow.svg"
@@ -81,7 +81,7 @@ export default function Header() {
             {/* 모바일 햄버거 메뉴 */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
+              className="xl:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
               aria-label="메뉴 열기"
             >
               <svg
@@ -102,7 +102,7 @@ export default function Header() {
 
         {/* 모바일 드롭다운 메뉴 */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white">
+          <div className="xl:hidden border-t border-gray-100 bg-white">
             <div className="py-2">
               <Link 
                 href="/about" 
