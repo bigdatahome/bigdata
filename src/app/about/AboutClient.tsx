@@ -22,8 +22,8 @@ export default function AboutClient() {
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-          <span className="block md:inline">&quot;AI는 현장에 닿을 때 진짜</span>
-          <span className="block md:inline">기술이 됩니다&quot;</span>
+          <span className="block md:inline">AI는 현장에 닿을 때 진짜</span>
+          <span className="block md:inline">기술이 됩니다</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 font-light mb-8 tracking-tight">
             대표 철학에서 출발한 실천 중심 접근법

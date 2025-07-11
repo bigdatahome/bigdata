@@ -20,7 +20,7 @@ export default function ConsultationPage() {
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-          <span className="block md:inline">당신의 기업에 AI는 너무 </span>
+          <span className="block md:inline">고객님의 기업에 AI는 너무 </span>
           <span className="block md:inline">이르다고 생각하시나요?</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 font-light mb-8 tracking-tight">
@@ -85,8 +85,8 @@ export default function ConsultationPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-            <span className="block md:inline">A. 그래서 저희는 &lsquo;현장 중심 </span>
-            <span className="block md:inline">AI 컨설팅&rsquo;을 제공합니다</span>
+            <span className="block md:inline">A. 그래서 저희는 현장 중심 </span>
+            <span className="block md:inline">AI 컨설팅을 제공합니다</span>
             </h2>
           </div>
           
@@ -114,7 +114,7 @@ export default function ConsultationPage() {
 
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-            <span className="block md:inline">당신의 데이터를 실전에서 </span>
+            <span className="block md:inline">고객님의 데이터를 실전에서 </span>
             <span className="block md:inline">작동하게 만듭니다!</span>
             </h2>
           </div>
@@ -211,7 +211,7 @@ export default function ConsultationPage() {
               AI는 먼 미래가 아닙니다.
             </p>
             <p className="text-gray-900 text-xl font-bold mt-2">
-              당신의 사업에 지금 필요한 실전 도구입니다.
+              고객님의 사업에 지금 필요한 실전 도구입니다.
             </p>
           </div>
         </div>

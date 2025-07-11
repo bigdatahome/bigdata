@@ -393,7 +393,7 @@ export default function ContactPage() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600">
-              당신의 데이터 기반 혁신을 함께 하겠습니다.
+              고객님의 데이터 기반 혁신을 함께 하겠습니다.
             </p>
           </div>
         </div>

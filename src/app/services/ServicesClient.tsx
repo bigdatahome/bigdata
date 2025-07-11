@@ -320,7 +320,7 @@ export default function ServicesClient() {
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
-          <span className="block md:inline">당신의 비즈니스에 맞는 </span>
+          <span className="block md:inline">고객님의 비즈니스에 맞는 </span>
           <span className="block md:inline">AI 솔루션을 만나보세요</span>
           </h2>
           <p className="text-xl font-light text-gray-300 mb-8">

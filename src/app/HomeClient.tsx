@@ -90,7 +90,7 @@ export default function HomeClient() {
             </div>
             
             <p className="text-3xl md:text-2xl lg:text-3xl font-light text-gray-200 leading-relaxed">
-              <span className="block md:inline">빠르게 효과를 체험할 수 있는</span>
+              <span className="block md:inline">최소 기능을 체험할 수 있는</span>
               <span className="block md:inline"> <span className="font-semibold text-white">MVP부터 상담하세요</span></span>
             </p>
             
@@ -347,7 +347,7 @@ export default function HomeClient() {
       <section id="contact" className="py-24 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
-          <span className="block md:inline">당신의 AI 전환을 지금</span>
+          <span className="block md:inline">고객님의 AI 전환을 지금</span>
           <span className="block md:inline">시작하세요</span>
           </h2>
           <p className="text-xl md:text-2xl font-light text-gray-300 mb-8">
