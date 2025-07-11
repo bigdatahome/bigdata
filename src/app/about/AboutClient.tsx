@@ -61,7 +61,7 @@ export default function AboutClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">대한민국산업현장교수</h3>
-                  <p className="text-sm text-gray-600">고용노동부 제2018-04-006호</p>
+                  <p className="text-sm text-gray-600">정보통신분야 11기 제2018-04-006호</p>
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">
@@ -81,7 +81,7 @@ export default function AboutClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">중소벤처기업부 기술지도사</h3>
-                  <p className="text-sm text-gray-600">등록 제4380호</p>
+                  <p className="text-sm text-gray-600">기술혁신관리 분야 22기 등록 제4380호</p>
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">

@@ -20,8 +20,8 @@ export default function ConsultationPage() {
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-          <span className="block md:inline">고객님의 기업에 AI는 너무 </span>
-          <span className="block md:inline">이르다고 생각하시나요?</span>
+          <span className="block md:inline">고객님의 기업에 AI 도입, </span>
+          <span className="block md:inline">어떻게 생각하시나요?</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 font-light mb-8 tracking-tight">
           <span className="block md:inline">중소기업을 위한 실전 AI 컨설팅, </span>
@@ -127,7 +127,7 @@ export default function ConsultationPage() {
               </div>
               <div className="flex items-center mb-4">
                 <div className="w-3 h-3 bg-black rounded-full mr-3"></div>
-                <span className="text-lg font-semibold text-gray-900 tracking-tight">대표는 대한민국산업현장교수, 기술지도사 등록</span>
+                <span className="text-lg font-semibold text-gray-900 tracking-tight">대한민국산업현장교수, 기술지도사 등록</span>
               </div>
             </div>
             

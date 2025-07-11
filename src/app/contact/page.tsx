@@ -308,7 +308,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">전화 상담</h3>
-              <p className="text-lg font-medium text-gray-700 mb-1">010-5234-3535</p>
+              <p className="text-lg font-medium text-gray-700 mb-1">042-322-3300</p>
               <p className="text-sm text-gray-600">평일 9:00 - 18:00</p>
             </div>
 

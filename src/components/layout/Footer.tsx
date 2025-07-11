@@ -16,7 +16,7 @@ export default function Footer() {
                 alt="BIGDATA T.I."
                 className="h-9 w-9"
               />
-              <span className="text-lg font-bold text-gray-900">빅데이터기술연구원</span>
+              <span className="text-lg font-bold text-gray-900">빅데이터기술연구원(주)</span>
             </div>
             <div className="text-gray-600 text-sm leading-relaxed">
               <p className="font-medium text-gray-900 mb-2">BIGDATA T.I. Co., Ltd.</p>
